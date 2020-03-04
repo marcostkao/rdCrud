@@ -14,18 +14,12 @@ export class GruposComponent implements OnInit {
   constructor(private http:HttpService) {
     
     this.http.getGrupos().subscribe(
-      (data) => { console.log(data) }
+      (data) => { 
+        this.grupos = data;
+       }
     );
 
-
-    this.grupos.push(
-      new Grupo(1, "teste1"),
-      new Grupo(2, "teste2"),
-      new Grupo(3, "teste3")
-      )
-
   }
-
 
 
   ngOnInit(): void {

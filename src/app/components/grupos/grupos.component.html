@@ -1,4 +1,7 @@
-{{grupos | json}}
+<ul>
+    <li *ngFor="let g of grupos">
+        <a href="#" >{{g.desc}}</a>
+    </li>
+</ul>
 
-
-<button class="btn btn-primary">Entrar</button>
+<!-- {} vai ser interpolado -->
