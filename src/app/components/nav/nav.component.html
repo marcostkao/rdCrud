@@ -1,11 +1,10 @@
 <nav>
     <ul>
-        <li [ngClass]="{'destaque':item.ativo}" *ngFor="let item of itens" >
-            <a href="#" (click)="destacar(item)" routerLink="{{item.route}}">{{item.label}}</a>
+        <li routerLinkActive="destaque" *ngFor="let item of itens">
+            <a routerLink="{{item.route}}">{{item.label}}</a>
         </li>
     </ul>
 </nav>
-
 
 
 
